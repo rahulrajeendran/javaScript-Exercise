@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str=prompt("Enter the name");
+        var l=str.length
+        l=l-1;
+        function pali(a,b){
+            if(a==b){
+                return true;
+            }
+            else if(str[a]!=str[b]){
+                console.log(str[a]);
+                return false;
+            }
+            else if(a>b){
+                return true;
+            }else{
+                return pali(a+1,b-1);
+            }
+        }
+        if(pali(0,l)){
+            document.write("Palindrome..")
+        }else{
+            document.write("Not palindrome.")
+        }
+    </script>
+</body>
+</html>

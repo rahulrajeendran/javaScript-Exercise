@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter the decimal number" id="dec">
+    <button onclick="dtob()">Convert</button>
+    <p id="ad"></p>
+    <p id="rse"></p>
+    <script>
+        function dtob(){
+            var d=parseInt(document.getElementById("dec").value);
+            var s=""
+            while(d!=0){
+                var a=Math.floor(d%2);
+                s=s+a
+                d=Math.floor(d/2);
+            }
+            s=parseInt(s);
+            document.getElementById("ad").innerHTML=s
+            var s2=""
+            while(s!=0){
+                var rev =Math.floor(s%10);
+                s2=s2+rev
+                s=Math.floor(s/10);
+            }
+            document.getElementById("rse").innerHTML=s2
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=prompt("enter the number");
+
+   console.log(num.length);
+   var a=num;
+   var c=num.length;
+   var sum=0;
+   while (a!=0) {
+    var b=Math.floor(a%10);
+    a=Math.floor(a/10);
+    sum=sum+(b*b*b);
+   }
+   if (sum==num) {
+    document.write("amstrong <br>");
+   }else{
+    document.write("not amstrong <br>");
+   }
+    </script>
+</body>
+</html>

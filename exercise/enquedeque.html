@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var l=parseInt(prompt("Enter the limit"));
+        var arr=[];
+        for(i=0;i<l;i++){
+            arr[i]=parseInt(prompt("Enter the "+(i+1)+"th element"))
+        }
+        var a=parseInt(prompt("enter the num to enqueue"));
+        arr[l]=a;
+        l=l+1;
+        var b=parseInt(prompt("enter the num to dequeue"));
+        for(j=0;j<l;j++){
+            if(arr[j]==b){
+                for(k=j;k<l;k++){
+                    arr[k]=arr[k+1];
+                }
+                l=l-1;
+            }
+        }
+        var st=""
+        for(i=0;i<l;i++){
+            st=st+arr[i];
+        }
+        document.write("result : "+st);
+    </script>
+</body>
+</html>

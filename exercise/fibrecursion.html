@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var l=parseInt(prompt("Enter the limit "));
+        var arr=[1];
+        i=1;
+        var str=""
+        function fib(a,b){
+            if(l!=0){
+                arr[i]=a
+                a=a+b;
+                b=arr[i];
+                i++;
+                l--;
+                return fib(a,b);
+            }else{
+                return arr;
+            }
+        }
+       var ar=fib(1,1);
+      for(j=0;j<i;j++){
+        str=str+ar[j];
+      }
+      document.write(str);
+    </script>
+</body>
+</html>

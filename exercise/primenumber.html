@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var val=parseInt(prompt("enter the value"));
+        var flag=0;
+for(var i=2;i<val;i++){
+    if(val%i==0){
+        document.write(" val is not a prime number"+"<br>");
+        flag=flag+1;
+        break;
+    }
+}
+if (flag==0) {
+    document.write(val +"is a prime number"+"<br>");
+}
+    </script>
+</body>
+</html>
